@@ -14,6 +14,9 @@ gem 'sass-rails', '~> 4.0.4'                 # CSS extension
 gem 'uglifier', '>= 1.0.3'                   # JavaScript interpreter
 gem "i18n-js", ">= 3.0.0.rc8"                # Javascript internationalization
 
+group :production do
+  gem 'rails_12factor'                       # Required for heroku Rails 4 ('rails_serve_static_assets')
+end
 
 group :test, :development, :qa do
   gem "pry-byebug"                           # Binding pry debugger
