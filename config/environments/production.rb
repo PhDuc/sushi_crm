@@ -66,6 +66,8 @@ SushiCrm::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
+  config.assets.js_compressor = :uglify
+  config.assets.raise_runtime_errors = false
   config.assets.precompile += %w( main/base.js
                                   home.js
                                 )
