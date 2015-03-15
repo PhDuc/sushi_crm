@@ -67,18 +67,9 @@ SushiCrm::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   config.assets.js_compressor = :uglify
-  config.assets.raise_runtime_errors = false
   config.assets.precompile += %w( main/base.js
                                   home.js
                                 )
-
-  # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.delivery_method = :sendmail
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_charset = "utf-8"
-  config.action_mailer.raise_delivery_errors = true
-
   # Enable threaded mode
   # config.threadsafe!
 
