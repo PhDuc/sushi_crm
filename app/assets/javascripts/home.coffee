@@ -10,6 +10,10 @@ Home.setUp = () ->
   $(window).bind 'scroll', ->
     Home.setHeaderClass()
 
+  $(document).on 'click', '.login-button', Home.openLoginModal
+  $(document).on 'click', '.login-submit', Home.authenticateUser
+
+
 
 Home.slideToSection = (event) ->
   if $(event.target).data('clickable') == 'yes'
@@ -32,6 +36,45 @@ Home.setHeaderClass = () ->
 
   if $(window).scrollTop() > $headerHeight
     $header.addClass('fixed-header')
+
+Home.openLoginModal = () ->
+  $('.login_result').removeClass('login-failed').removeClass('login-success')
+  $('.login_result').html('')
+  $('#password').val('')
+  $('.modal').removeClass('hidden')
+  $('.modal').modal()
+
+Home.closeLoginModal = () ->
+  $('.modal').modal('hide')
+
+Home.authenticateUser = () ->
+  #default values for the calculator
+  params = {
+    username: $('#username').val()
+    password: $('#password').val()
+  }
+
+  url = "/home/user_login"
+
+  $.ajax
+    url: url
+    type: "GET"
+    dataType: 'json'
+    data: params
+
+    error: (data) ->
+      Home.handleLoginError(data)
+    success: (data) ->
+      Home.handleLoginSuccess(data)
+  false
+
+Home.handleLoginSuccess = (data) ->
+  if data["authenticated"] == 'true'
+    $('.login_result').removeClass('login-failed').addClass('login-success')
+    $('.login_result').html('Login Sucess!')
+  else
+    $('.login_result').removeClass('login-success').addClass('login-failed')
+    $('.login_result').html('Wrong username or password!')
 
 $ -> Home.setUp()
 

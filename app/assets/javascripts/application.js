@@ -16,5 +16,5 @@
 //= require i18n
 //= require i18n/translations
 //= require home
-//= require main
+//= require main/base
 //= require_tree .

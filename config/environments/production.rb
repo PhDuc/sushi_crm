@@ -69,7 +69,8 @@ SushiCrm::Application.configure do
   config.assets.js_compressor = :uglify
   config.assets.precompile += %w( main/base.js
                                   home.js
-                                )
+                                ) +
+                              %w[*.png *.jpg *.jpeg *.gif]
   # Enable threaded mode
   # config.threadsafe!
 
