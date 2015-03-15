@@ -1,0 +1,14 @@
+.header.fixed-header
+  .header-wrapper
+    .container
+      .row
+        .left
+          =image_tag  "sushi_crm_smaller_trans.png", :class => "sushi-logo"
+        .right
+          %u.nav-body-list.hidden
+          %ul.nav-body-full
+            %li.how-it-works{:'data-clickable' => 'yes'} How it works
+            %li.pricing{:'data-clickable' => 'yes'} Pricing
+            %li.get-started{:'data-clickable' => 'yes'} Get Started
+            %li
+              %button.btn.btn-default.login-button LOGIN

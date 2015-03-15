@@ -1,0 +1,205 @@
+/* This is mainly for testing single page application css.
+   When everything is well-defined, the css should be separated
+   in correct files based on functions */
+
+h1 {
+  font-family: 'Montez', sans-serif;
+  color: #c94d00;
+  font-size: 50px;
+}
+
+section {
+  padding-top: 10px;
+}
+
+.vertical-mid {
+  vertical-align: middle !important;
+}
+
+.centralize {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 70%;
+}
+
+.note {
+  font-style: italic;
+  font-size: 11px;
+}
+
+.short {
+  width: 50%;
+  margin-left: 0;
+}
+
+.footer {
+  background-color: #1E1E1E;
+  font-size: 14px;
+  bottom:0;
+  width: 100%;
+  margin-top: 70px;
+}
+
+.footer-wrapper {
+  color: #bfbfbf;
+  padding: 15px 20px 15px 20px;
+
+  a {
+    color: #afcecc;
+  }
+
+  .separator {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 12px;
+    margin-left: 10px;
+  }
+}
+
+.header {
+  background-color: #8B0000;
+  font-size: 14px;
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+  position: relative;
+
+  .go-top {
+    visibility: hidden;
+  }
+}
+
+.fixed-header {
+  position:fixed;
+  top: 0;
+
+  .go-top {
+    visibility: visible;
+  }
+}
+
+.content-wrapper {
+  background-color: white;
+}
+
+.left  { float: left;  }
+.right { float: right; }
+
+.mT20 { margin-top: 20px; }
+.mR10 { margin-right: 10px; }
+
+.sushi-logo {
+  height: 80px;
+}
+
+ul.nav-body-full{
+  display: block;
+  margin-top: 36px;
+  li {
+    display: inline-block;
+    color: white;
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 25px;
+    padding: 0px 20px 20px 0px;
+    cursor: pointer;
+  }
+
+  li:hover {
+    color: #FFFF99;
+    text-decoration: underline;
+  }
+}
+
+.teaser {
+  height: 100%;
+}
+
+.teaser-image {
+  width: 100%;
+}
+
+.login-button {
+  width: 100px;
+  height: 34px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  background-color: #B8DB4D;
+}
+
+.product-title {
+  padding-top: 30px;
+  font-family: 'Hind', sans-serif;
+  color: #484848;
+}
+
+.product-brief {
+  color: #8F8F8F;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.note {
+  color: gray;
+  font-size: 10px;
+  text-decoration: italic;
+}
+
+@media all and (max-width: 4000px){
+  .product-title {
+    font-size: 90px;
+  }
+  .product-brief {
+    font-size: 40px;
+  }
+  .nav-body-full {
+    visibility: visible;
+  }
+}
+
+@media all and (max-width: 1280px){
+  .product-title {
+    font-size: 75px;
+  }
+  .product-brief {
+    font-size: 35px;
+  }
+  .nav-body-full {
+    visibility: visible;
+  }
+}
+
+@media all and (max-width: 1000px){
+  .product-title {
+    font-size: 60px;
+  }
+  .product-brief {
+    font-size: 30px;
+  }
+  .nav-body-full {
+    visibility: hidden;
+  }
+}
+
+@media all and (max-width: 800px){
+  .product-title {
+    font-size: 35px;
+  }
+  .product-brief {
+    font-size: 20px;
+  }
+  .nav-body-full {
+    visibility: hidden;
+  }
+}
+
+@media all and (max-width: 320px){
+  .product-title {
+    font-size: 25px;
+  }
+  .product-brief {
+    font-size: 14px;
+  }
+  .nav-body-full {
+    visibility: hidden;
+  }
+}
