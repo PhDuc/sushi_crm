@@ -76,5 +76,9 @@ Home.handleLoginSuccess = (data) ->
     $('.login_result').removeClass('login-success').addClass('login-failed')
     $('.login_result').html('Wrong username or password!')
 
+Home.handleLoginError = (data) ->
+  $('.login_result').removeClass('login-success').addClass('login-failed')
+  $('.login_result').html('An error has occured!')
+
 $ -> Home.setUp()
 
