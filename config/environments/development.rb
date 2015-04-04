@@ -37,4 +37,7 @@ SushiCrm::Application.configure do
 
   # Automatically inject JavaScript needed for LiveReload
   config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+
+  # Loading the associated records of the objects returned by Model.find using as few queries as possible
+  config.eager_load = false
 end
