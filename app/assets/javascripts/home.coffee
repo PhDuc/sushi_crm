@@ -38,7 +38,7 @@ Home.slideToSection = (event) ->
 
     window.setTimeout(->
         $(event.target).data('clickable', 'yes')
-      , 1000)
+      , 400)
 
 
 Home.setHeaderClass = () ->
