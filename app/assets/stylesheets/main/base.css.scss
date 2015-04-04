@@ -79,6 +79,12 @@ section {
   }
 }
 
+.full-header {
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+}
+
 .content-wrapper {
   background-color: white;
 }
@@ -152,8 +158,11 @@ ul.nav-body-full{
   .product-brief {
     font-size: 40px;
   }
-  .nav-body-full {
-    visibility: visible;
+  .mini#desktop-nav {
+  }
+  .mini.mobile-nav {
+    margin-top: 15px;
+    display: none;
   }
 }
 
@@ -164,8 +173,11 @@ ul.nav-body-full{
   .product-brief {
     font-size: 35px;
   }
-  .nav-body-full {
-    visibility: visible;
+  .mini#desktop-nav {
+  }
+  .mini.mobile-nav {
+    margin-top: 15px;
+    display: none;
   }
 }
 
@@ -174,34 +186,45 @@ ul.nav-body-full{
     font-size: 60px;
   }
   .product-brief {
-    font-size: 30px;
+    font-size: 28px;
   }
-  .nav-body-full {
-    visibility: hidden;
+  .mini#desktop-nav {
+  }
+  .mini.mobile-nav {
+    margin-top: 15px;
+    display: none;
   }
 }
 
-@media all and (max-width: 800px){
+@media all and (max-width: 720px){
   .product-title {
-    font-size: 35px;
+    font-size: 45px;
   }
   .product-brief {
     font-size: 20px;
   }
-  .nav-body-full {
-    visibility: hidden;
+  .mini#desktop-nav {
+    display: none;
+  }
+  .mini.mobile-nav {
+    margin-top: 10px;
+    display: block;
   }
 }
 
-@media all and (max-width: 320px){
+@media all and (max-width: 360px){
   .product-title {
-    font-size: 25px;
+    font-size: 30px;
   }
   .product-brief {
-    font-size: 14px;
+    font-size: 16px;
   }
-  .nav-body-full {
-    visibility: hidden;
+  .mini#desktop-nav {
+    display: none;
+  }
+  .mini.mobile-nav {
+    margin-top: 10px;
+    display: block;
   }
 }
 
@@ -260,4 +283,45 @@ ul.nav-body-full{
   color: green;
 }
 
+.mini {
+  display: block;
+  height: 5px;
+}
 
+#mobile-nav{
+  .glyphicon-align-justify {
+    font-size: 2em;
+    background-color: transparent;
+    border: 0px solid;
+    float: right;
+    color: whitesmoke;
+  }
+  .dropdown-menu {
+    float: right;
+  }
+}
+
+#mobile-nav-links{
+  font-family: 'Nunito', sans-serif;
+  li{
+    text-align: center;
+    background-color: brown;
+    font-size: 15px;
+    border-radius: 0px;
+    border: 0px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  li:hover {
+    color: yellow;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover{
+    color: yellow;
+  }
+}

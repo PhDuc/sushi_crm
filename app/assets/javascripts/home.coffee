@@ -6,19 +6,31 @@ window.Home = @Home || {}
 
 Home.setUp = () ->
   $(document).on 'click', '.nav-body-full li', Home.slideToSection
+  $(document).on 'click', '#mobile-nav-links li', Home.slideToSection
+  $(document).on 'click', '#dropdownMenu1', Home.toggleDropdown
   Home.setHeaderClass()
   $(window).bind 'scroll', ->
     Home.setHeaderClass()
 
-  $(document).on 'click', '.login-button', Home.openLoginModal
+  $(document).on 'click', '.login-button, .login-link', Home.openLoginModal
   $(document).on 'click', '.login-submit', Home.authenticateUser
 
-
+Home.toggleDropdown = (event) ->
+  cookie_data = Home.readCookie()
+  if cookie_data['mobile_nav_opened'] == undefined
+    cl = $('#mobile-nav-links').attr('class')
+    Home.setCookie('mobile_nav_opened', (!_.include(cl, 'hidden')).toString(), 1)
+    cookie_data = Home.readCookie()
+    if cookie_data['mobile_nav_opened'] == 'false'
+      $('#mobile-nav-links').removeClass('hidden')
+    else
+      $('#mobile-nav-links').addClass('hidden')
 
 Home.slideToSection = (event) ->
+  $('#mobile-nav-links').addClass('hidden')
   if $(event.target).data('clickable') == 'yes'
     $(event.target).data('clickable', 'no')
-    id = '#' + $(event.target).attr('class')
+    id = '#' + _.last($(event.target).attr('class').split(' '))
     if _.isEmpty($('.fixed-header'))
       $("html, body").animate({ scrollTop: $(id).offset().top - 150}, 400);
     else
@@ -30,7 +42,7 @@ Home.slideToSection = (event) ->
 
 
 Home.setHeaderClass = () ->
-  $header = $('.header')
+  $header = $('.full-header')
   $headerHeight  = 90
   $header.removeClass('fixed-header')
 
@@ -79,6 +91,22 @@ Home.handleLoginSuccess = (data) ->
 Home.handleLoginError = (data) ->
   $('.login_result').removeClass('login-success').addClass('login-failed')
   $('.login_result').html('An error has occured!')
+
+Home.setCookie = (name, value, time_in_sec) ->
+  d = new Date()
+  d.setTime(d.getTime() + 1000*time_in_sec)
+  data = name + '=' + value + '; expires=' + d.toUTCString()
+  document.cookie = data
+
+Home.readCookie = () ->
+  data = {}
+  current_cookie = document.cookie
+  list = current_cookie.split(';')
+  _.each list, (element) ->
+    pairs = element.split('=')
+    if pairs.length == 2
+      data[$.trim(pairs[0].toString())] = $.trim(pairs[1].toString())
+  return data
 
 $ -> Home.setUp()
 
