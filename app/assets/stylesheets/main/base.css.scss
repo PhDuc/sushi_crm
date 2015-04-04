@@ -23,11 +23,6 @@ section {
   width: 70%;
 }
 
-.note {
-  font-style: italic;
-  font-size: 11px;
-}
-
 .short {
   width: 50%;
   margin-left: 0;
@@ -146,9 +141,9 @@ ul.nav-body-full{
 }
 
 .note {
-  color: gray;
+  color: dimgray;
   font-size: 10px;
-  text-decoration: italic;
+  font-style: italic;
 }
 
 @media all and (max-width: 4000px){
@@ -228,27 +223,6 @@ ul.nav-body-full{
   }
 }
 
-
-.form-signin input[type="text"] {
-    margin-bottom: 5px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-.form-signin .form-control {
-    position: relative;
-    font-size: 16px;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    height: auto;
-    padding: 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 .vertical-offset-100 {
     padding-top: 100px;
 }
@@ -261,18 +235,23 @@ ul.nav-body-full{
 .panel {
   margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.75);
-  border: 1px solid transparent;
+  border: 1px solid floralwhite;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 
   .panel-heading {
-    background-color: currentColor;
+    background-color: #192434;
   }
 
   .panel-body {
-    background-color: whitesmoke;
+    background-color: lightgray;
   }
+}
+
+.panel-login {
+  padding: 4px;
+  height: 20px;
 }
 
 .login_result.login-failed {
@@ -325,3 +304,4 @@ ul.nav-body-full{
     color: yellow;
   }
 }
+

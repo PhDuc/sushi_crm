@@ -8,12 +8,26 @@ Home.setUp = () ->
   $(document).on 'click', '.nav-body-full li', Home.slideToSection
   $(document).on 'click', '#mobile-nav-links li', Home.slideToSection
   $(document).on 'click', '#dropdownMenu1', Home.toggleDropdown
+  $(document).on 'keydown', '.form__field input', Home.submitForm
   Home.setHeaderClass()
   $(window).bind 'scroll', ->
     Home.setHeaderClass()
 
   $(document).on 'click', '.login-button, .login-link', Home.openLoginModal
-  $(document).on 'click', '.login-submit', Home.authenticateUser
+  $(document).on 'click', '.login-submit', Home.authenticateUserWithWait
+
+  $(document).on 'focusout', '.form__field input', Home.preserveFormInput
+
+Home.submitForm = (event) ->
+  if event.keyCode == 13
+    $(event.target).parent().siblings().closest('.login-submit').click()
+
+Home.preserveFormInput = (event) ->
+  _.each $('.form__field input'), (input) ->
+    if ($(input).val().length != 0)
+      $(input).addClass('filled')
+    else
+      $(input).removeClass('filled')
 
 Home.toggleDropdown = (event) ->
   cookie_data = Home.readCookie()
@@ -59,8 +73,15 @@ Home.openLoginModal = () ->
 Home.closeLoginModal = () ->
   $('.modal').modal('hide')
 
+Home.authenticateUserWithWait = () ->
+  document.getElementById('login-submit').disabled = true
+  $('#login-submit').html("Waiting...")
+  setTimeout((-> Home.authenticateUser()), 1000)
+
 Home.authenticateUser = () ->
   #default values for the calculator
+  # document.getElementById('login-submit').disabled = 'true'
+  # $('#login-submit').html("Waiting...")
   params = {
     username: $('#username').val()
     password: $('#password').val()
@@ -78,6 +99,9 @@ Home.authenticateUser = () ->
       Home.handleLoginError(data)
     success: (data) ->
       Home.handleLoginSuccess(data)
+
+  document.getElementById('login-submit').disabled = false
+  $('#login-submit').html("LOGIN »")
   false
 
 Home.handleLoginSuccess = (data) ->

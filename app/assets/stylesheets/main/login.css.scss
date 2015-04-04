@@ -1,0 +1,66 @@
+.form-signin{
+  width: 360px;
+  margin: 0 auto;
+}
+
+.form__field{
+  position: relative;
+  width: 330px;
+  display: block;
+  overflow: hidden;
+  margin: 1em 0;
+  background: #192434;
+  color: #fefefe;
+  font-family: 'Open Sans';
+  font-size: 13px;
+}
+label{
+  float: right;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  font-size: 1em;
+  transition: transform 400ms;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+input[type="submit"]{
+  width: 100%;
+  margin: 0;
+  background: none;
+}
+input,
+textarea{
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 75%;
+  height: 100%;
+  margin: 0;
+  padding: 1em;
+  border: none;
+  transform: translate3D(-100%,0,0);
+  transition: transform 400ms;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-delay: 60ms;
+  &:focus,
+  &.filled{
+    color: black;
+    transform: translate3D(100%,0,0);
+    outline: none;
+    + label{
+      transform: translate3D(75%,0,0);
+    }
+  }
+}
+
+.login-submit {
+  width: 150px;
+  height: 38px;
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #192434;
+}
