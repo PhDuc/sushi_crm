@@ -9,14 +9,34 @@ Home.setUp = () ->
   $(document).on 'click', '#mobile-nav-links li', Home.slideToSection
   $(document).on 'click', '#dropdownMenu1', Home.toggleDropdown
   $(document).on 'keydown', '.form__field input', Home.submitForm
+  $(document).on 'click', '.login-button, .login-link', Home.openLoginModal
+  $(document).on 'click', '.login-submit', Home.authenticateUserWithWait
+  $(document).on 'focusout', '.form__field input', Home.preserveFormInput
+
   Home.setHeaderClass()
+  Home.notify()
+
   $(window).bind 'scroll', ->
     Home.setHeaderClass()
 
-  $(document).on 'click', '.login-button, .login-link', Home.openLoginModal
-  $(document).on 'click', '.login-submit', Home.authenticateUserWithWait
 
-  $(document).on 'focusout', '.form__field input', Home.preserveFormInput
+Home.notify = ->
+  noty(
+    id: 'home-notify'
+    text: "<h4>Important:</h4><p> We have a dashboard WIP now !"
+    type: 'warning'
+    animation:
+      open: 'animated fadeInDownBig',
+      close: 'animated fadeOutUp',
+      easing: 'swing',
+      speed: 500
+    closeWith: ['click']
+    buttons: [
+      addClass: 'btn btn-primary', text: 'Login to check it out', onClick: ($noty) ->
+        $noty.close()
+        Home.openLoginModal()
+      ]
+  )
 
 Home.submitForm = (event) ->
   if event.keyCode == 13

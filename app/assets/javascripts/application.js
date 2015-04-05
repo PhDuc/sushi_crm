@@ -9,6 +9,7 @@
 //
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
+// app/assets/javascripts/shared/flashes/noty-config.js.coffee
 //
 //= require jquery
 //= require jquery_ujs
@@ -17,4 +18,7 @@
 //= require i18n/translations
 //= require home
 //= require main/base
+//= require noty/jquery.noty
+//= require noty/layouts/bottom
+//= require noty/themes/default
 //= require_tree .
