@@ -64,7 +64,7 @@ h1 {
   width: 100%;
   padding: 0;
   background-color: #fff;
-  margin-top: -35px;
+  margin-top: -50px;
 }
 .huge {
   line-height: normal;
@@ -162,4 +162,9 @@ li {
       color: #df8a13;
     }
   }
+}
+
+.header{
+  position: absolute;
+  top:0 ;
 }
