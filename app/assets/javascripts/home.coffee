@@ -108,6 +108,7 @@ Home.handleLoginSuccess = (data) ->
   if data["authenticated"] == 'true'
     $('.login_result').removeClass('login-failed').addClass('login-success')
     $('.login_result').html('Login Sucess!')
+    window.location = '/dashboard'
   else
     $('.login_result').removeClass('login-success').addClass('login-failed')
     $('.login_result').html('Wrong username or password!')
