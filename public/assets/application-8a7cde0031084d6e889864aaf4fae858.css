@@ -11471,67 +11471,56 @@ section {
   width: 100%;
   height: 80px;
   z-index: 100;
-  position: relative;
 }
-/* line 64, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 63, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .header .go-top {
   visibility: hidden;
 }
 
-/* line 69, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
-.fixed-header {
-  position: fixed;
-  top: 0;
-}
-/* line 73, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
-.fixed-header .go-top {
-  visibility: visible;
-}
-
-/* line 78, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 68, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .full-header {
   width: 100%;
   height: 80px;
   z-index: 100;
 }
 
-/* line 84, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 74, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .content-wrapper {
   background-color: white;
 }
 
-/* line 88, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 78, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .left {
   float: left;
 }
 
-/* line 89, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 79, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .right {
   float: right;
 }
 
-/* line 91, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 81, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .mT20 {
   margin-top: 20px;
 }
 
-/* line 92, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 82, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .mR10 {
   margin-right: 10px;
 }
 
-/* line 94, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 84, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .sushi-logo {
   height: 60px;
   margin-top: 10px;
 }
 
-/* line 99, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 89, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 ul.nav-body-full {
   display: block;
   margin-top: 36px;
 }
-/* line 102, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 92, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 ul.nav-body-full li {
   display: inline-block;
   color: white;
@@ -11540,23 +11529,23 @@ ul.nav-body-full li {
   padding: 0px 20px 20px 0px;
   cursor: pointer;
 }
-/* line 111, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 101, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 ul.nav-body-full li:hover {
   color: #FFFF99;
   text-decoration: underline;
 }
 
-/* line 117, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 107, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .teaser {
   height: 100%;
 }
 
-/* line 121, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 111, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .teaser-image {
   width: 100%;
 }
 
-/* line 125, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 115, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .login-button {
   width: 100px;
   height: 34px;
@@ -11566,20 +11555,20 @@ ul.nav-body-full li:hover {
   font-family: 'Hind', sans-serif;
 }
 
-/* line 134, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 124, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .product-title {
   padding-top: 30px;
   font-family: 'Hind', sans-serif;
   color: #484848;
 }
 
-/* line 140, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 130, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .product-brief {
   color: #8F8F8F;
   font-family: 'Rajdhani', sans-serif;
 }
 
-/* line 145, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 135, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .note {
   color: dimgray;
   font-size: 10px;
@@ -11587,106 +11576,118 @@ ul.nav-body-full li:hover {
 }
 
 @media all and (max-width: 4000px) {
-  /* line 152, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  /* line 142, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
   .product-title {
     font-size: 75px;
   }
 
-  /* line 155, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  /* line 145, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
   .product-brief {
     font-size: 40px;
   }
 
-  /* line 160, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
-  .mini.mobile-nav {
-    margin-top: 15px;
-    display: none;
-  }
-}
-@media all and (max-width: 1280px) {
-  /* line 167, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
-  .product-title {
-    font-size: 70px;
-  }
-
-  /* line 170, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
-  .product-brief {
-    font-size: 35px;
-  }
-
-  /* line 175, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
-  .mini.mobile-nav {
-    margin-top: 15px;
-    display: none;
-  }
-}
-@media all and (max-width: 1000px) {
-  /* line 182, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
-  .product-title {
-    font-size: 60px;
-  }
-
-  /* line 185, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
-  .product-brief {
-    font-size: 28px;
-  }
-
-  /* line 190, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
-  .mini.mobile-nav {
-    margin-top: 15px;
-    display: none;
-  }
-}
-@media all and (max-width: 720px) {
-  /* line 197, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
-  .product-title {
-    font-size: 45px;
-  }
-
-  /* line 200, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
-  .product-brief {
-    font-size: 20px;
-  }
-
-  /* line 203, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  /* line 148, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
   .mini#desktop-nav {
     display: none;
   }
 
-  /* line 206, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  /* line 151, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  .mini.mobile-nav {
+    margin-top: 15px;
+  }
+}
+@media all and (max-width: 1280px) {
+  /* line 157, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  .product-title {
+    font-size: 70px;
+  }
+
+  /* line 160, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  .product-brief {
+    font-size: 35px;
+  }
+
+  /* line 163, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  .mini#desktop-nav {
+    display: none;
+  }
+
+  /* line 166, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  .mini.mobile-nav {
+    margin-top: 15px;
+  }
+}
+@media all and (max-width: 1000px) {
+  /* line 172, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  .product-title {
+    font-size: 60px;
+  }
+
+  /* line 175, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  .product-brief {
+    font-size: 28px;
+  }
+
+  /* line 178, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  .mini#desktop-nav {
+    display: none;
+  }
+
+  /* line 181, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  .mini.mobile-nav {
+    margin-top: 15px;
+  }
+}
+@media all and (max-width: 720px) {
+  /* line 187, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  .product-title {
+    font-size: 45px;
+  }
+
+  /* line 190, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  .product-brief {
+    font-size: 20px;
+  }
+
+  /* line 193, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  .mini#desktop-nav {
+    display: none;
+  }
+
+  /* line 196, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
   .mini.mobile-nav {
     margin-top: 10px;
     display: block;
   }
 }
 @media all and (max-width: 360px) {
-  /* line 213, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  /* line 203, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
   .product-title {
     font-size: 30px;
   }
 
-  /* line 216, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  /* line 206, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
   .product-brief {
     font-size: 16px;
   }
 
-  /* line 219, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  /* line 209, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
   .mini#desktop-nav {
     display: none;
   }
 
-  /* line 222, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+  /* line 212, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
   .mini.mobile-nav {
     margin-top: 10px;
     display: block;
   }
 }
-/* line 228, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 218, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .vertical-offset-100 {
   padding-top: 100px;
 }
 
-/* line 231, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 221, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .img-responsive {
   display: block;
   max-width: 100%;
@@ -11694,7 +11695,7 @@ ul.nav-body-full li:hover {
   margin: auto;
 }
 
-/* line 237, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 227, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .panel {
   margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.75);
@@ -11702,38 +11703,38 @@ ul.nav-body-full li:hover {
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-/* line 245, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 235, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .panel .panel-heading {
   background-color: #192434;
 }
-/* line 249, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 239, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .panel .panel-body {
   background-color: lightgray;
 }
 
-/* line 254, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 244, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .panel-login {
   padding: 4px;
   height: 20px;
 }
 
-/* line 259, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 249, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .login_result.login-failed {
   color: crimson;
 }
 
-/* line 263, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 253, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .login_result.login-success {
   color: green;
 }
 
-/* line 267, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 257, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 .mini {
   display: block;
   height: 5px;
 }
 
-/* line 273, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 263, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 #mobile-nav .glyphicon-align-justify {
   font-size: 2em;
   background-color: transparent;
@@ -11741,16 +11742,18 @@ ul.nav-body-full li:hover {
   float: right;
   color: whitesmoke;
 }
-/* line 280, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 270, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 #mobile-nav .dropdown-menu {
   float: right;
 }
 
-/* line 285, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 275, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 #mobile-nav-links {
   font-family: 'Nunito', sans-serif;
+  margin-top: -20px;
+  overflow: visible;
 }
-/* line 287, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 279, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 #mobile-nav-links li {
   text-align: center;
   background-color: brown;
@@ -11761,18 +11764,32 @@ ul.nav-body-full li:hover {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 298, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 290, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 #mobile-nav-links li:hover {
   color: yellow;
 }
-/* line 301, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 293, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 #mobile-nav-links a {
   color: white;
   text-decoration: none;
 }
-/* line 305, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+/* line 297, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
 #mobile-nav-links a:hover {
   color: yellow;
+}
+
+/* line 302, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+.fixed-header {
+  position: fixed;
+  top: 0;
+}
+/* line 306, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+.fixed-header .go-top {
+  visibility: visible;
+}
+/* line 310, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/base.css.scss */
+.fixed-header #mobile-nav-links {
+  margin-top: 80px;
 }
 
 /* line 1, /Users/duc/dev/sushi_crm/app/assets/stylesheets/main/login.css.scss */
@@ -11870,13 +11887,20 @@ textarea.filled + label {
 /* line 17, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 body {
   margin-top: 100px;
-  background-color: #222;
+  background-color: white;
+}
+
+/* line 22, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+h1 {
+  font-size: 36px;
+  font-family: 'Nunito';
 }
 
 @media (min-width: 768px) {
-  /* line 22, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+  /* line 27, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
   .side-nav {
     position: fixed;
+    height: 100%;
     top: 51px;
     left: 225px;
     width: 225px;
@@ -11887,157 +11911,169 @@ body {
     background-color: #222;
   }
 
-  /* line 42, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+  /* line 48, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
   .side-nav > li > a {
     width: 225px;
   }
 }
-/* line 47, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 53, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 #wrapper {
   padding-left: 0px;
 }
 
 @media (min-width: 768px) {
-  /* line 52, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+  /* line 58, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
   #wrapper {
     padding-left: 225px;
   }
 }
-/* line 57, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 63, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 #page-wrapper {
   width: 100%;
   padding: 0;
   background-color: #fff;
+  margin-top: -50px;
 }
 
-/* line 62, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 70, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+#content-wrapper {
+  margin-top: -50px;
+}
+
+/* line 74, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .huge {
   line-height: normal;
   font-size: 40px;
 }
 
-/* line 66, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 78, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .top-nav {
   padding: 0 15px;
 }
 
-/* line 69, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 81, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .top-nav > li {
   display: inline-block;
   float: left;
 }
 
-/* line 74, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 86, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 ul.message-dropdown {
   padding: 0;
   max-height: 250px;
   overflow-x: hidden;
   overflow-y: auto;
 }
-/* line 80, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 92, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 ul.alert-dropdown {
   width: 200px;
 }
 
-/* line 85, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 97, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 li.message-preview {
   width: 275px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
-/* line 89, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 101, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 li.message-preview > a {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-/* line 93, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 105, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 li.message-footer {
   margin: 5px 0;
 }
 
-/* line 97, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 109, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .side-nav > li > ul {
   padding: 0;
 }
 
-/* line 100, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 112, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .side-nav > li > ul > li > a {
   display: block;
   padding: 10px 15px 10px 38px;
   text-decoration: none;
   color: #999;
 }
-/* line 105, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 117, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .side-nav > li > ul > li > a:hover {
   color: #fff;
 }
 
-/* line 109, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 121, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .flot-chart {
   display: block;
   height: 400px;
 }
 
-/* line 113, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 125, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .flot-chart-content {
   width: 100%;
   height: 100%;
 }
 
-/* line 117, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 129, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .panel-green {
   border-color: #5cb85c;
 }
-/* line 119, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 131, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .panel-green .panel-heading {
   border-color: #5cb85c;
   color: #fff;
   background-color: #5cb85c;
 }
-/* line 124, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 136, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .panel-green a {
   color: #5cb85c;
 }
-/* line 126, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 138, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .panel-green a:hover {
   color: #3d8b3d;
 }
 
-/* line 131, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 143, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .panel-red {
   border-color: #d9534f;
 }
-/* line 133, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 145, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .panel-red .panel-heading {
   border-color: #d9534f;
   color: #fff;
   background-color: #d9534f;
 }
-/* line 138, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 150, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .panel-red a {
   color: #d9534f;
 }
-/* line 140, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 152, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .panel-red a:hover {
   color: #b52b27;
 }
 
-/* line 145, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 157, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .panel-yellow {
   border-color: #f0ad4e;
 }
-/* line 147, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 159, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .panel-yellow .panel-heading {
   border-color: #f0ad4e;
   color: #fff;
   background-color: #f0ad4e;
 }
-/* line 152, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 164, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .panel-yellow a {
   color: #f0ad4e;
 }
-/* line 154, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+/* line 166, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
 .panel-yellow a:hover {
   color: #df8a13;
+}
+
+/* line 172, /Users/duc/dev/sushi_crm/app/assets/stylesheets/dashboard.css.scss */
+.header {
+  position: absolute;
+  top: 0;
 }
 
 /* line 1, /Users/duc/dev/sushi_crm/app/assets/stylesheets/morris.css.scss */
