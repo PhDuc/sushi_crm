@@ -11,4 +11,7 @@
     = favicon_link_tag 'favicon.ico'
     = csrf_meta_tags
   %body
-    = render partial: 'shared/home_landing'
+    - if controller_name == 'home'
+      = render partial: 'shared/home_landing'
+    - else
+      = render partial: 'shared/app_landing'

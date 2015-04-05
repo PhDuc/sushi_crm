@@ -14068,12 +14068,30 @@ if (!Array.prototype.some)
     $(document).on('click', '.nav-body-full li', Home.slideToSection);
     $(document).on('click', '#mobile-nav-links li', Home.slideToSection);
     $(document).on('click', '#dropdownMenu1', Home.toggleDropdown);
+    $(document).on('keydown', '.form__field input', Home.submitForm);
     Home.setHeaderClass();
     $(window).bind('scroll', function() {
       return Home.setHeaderClass();
     });
     $(document).on('click', '.login-button, .login-link', Home.openLoginModal);
-    return $(document).on('click', '.login-submit', Home.authenticateUser);
+    $(document).on('click', '.login-submit', Home.authenticateUserWithWait);
+    return $(document).on('focusout', '.form__field input', Home.preserveFormInput);
+  };
+
+  Home.submitForm = function(event) {
+    if (event.keyCode === 13) {
+      return $(event.target).parent().siblings().closest('.login-submit').click();
+    }
+  };
+
+  Home.preserveFormInput = function(event) {
+    return _.each($('.form__field input'), function(input) {
+      if ($(input).val().length !== 0) {
+        return $(input).addClass('filled');
+      } else {
+        return $(input).removeClass('filled');
+      }
+    });
   };
 
   Home.toggleDropdown = function(event) {
@@ -14108,7 +14126,7 @@ if (!Array.prototype.some)
       }
       return window.setTimeout(function() {
         return $(event.target).data('clickable', 'yes');
-      }, 1000);
+      }, 400);
     }
   };
 
@@ -14134,6 +14152,14 @@ if (!Array.prototype.some)
     return $('.modal').modal('hide');
   };
 
+  Home.authenticateUserWithWait = function() {
+    document.getElementById('login-submit').disabled = true;
+    $('#login-submit').html("Waiting...");
+    return setTimeout((function() {
+      return Home.authenticateUser();
+    }), 1000);
+  };
+
   Home.authenticateUser = function() {
     var params, url;
     params = {
@@ -14153,6 +14179,8 @@ if (!Array.prototype.some)
         return Home.handleLoginSuccess(data);
       }
     });
+    document.getElementById('login-submit').disabled = false;
+    $('#login-submit').html("LOGIN »");
     return false;
   };
 
@@ -14207,6 +14235,10 @@ if (!Array.prototype.some)
   $(function() {
     return Base.setUp();
   });
+
+}).call(this);
+(function() {
+
 
 }).call(this);
 // This is a manifest file that'll be compiled into application.js, which will include all the files
