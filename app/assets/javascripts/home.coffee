@@ -21,22 +21,31 @@ Home.setUp = () ->
 
 
 Home.notify = ->
+  if _.include(['/', '/home'], window.location.pathname)
+    Home.notifyLandingPage()
+  else
+    Home.notifyAppPages()
+
+Home.notifyLandingPage = ->
   noty(
-    id: 'home-notify'
-    text: "<h4>Important:</h4><p> We have a dashboard WIP now !"
-    type: 'warning'
-    animation:
-      open: 'animated fadeInDownBig',
-      close: 'animated fadeOutUp',
-      easing: 'swing',
-      speed: 500
-    closeWith: ['click']
-    buttons: [
-      addClass: 'btn btn-primary', text: 'Login to check it out', onClick: ($noty) ->
-        $noty.close()
-        Home.openLoginModal()
-      ]
-  )
+      id: 'home-notify'
+      text: "<h4>Important:</h4><p> We have a dashboard WIP now !"
+      type: 'warning'
+      animation:
+        open: 'animated fadeInDownBig',
+        close: 'animated fadeOutUp',
+        easing: 'swing',
+        speed: 500
+      closeWith: ['click']
+      buttons: [
+        addClass: 'btn btn-primary', text: 'Login to check it out', onClick: ($noty) ->
+          $noty.close()
+          Home.openLoginModal()
+        ]
+    )
+
+Home.notifyAppPages = ->
+  #Do nothing atm
 
 Home.submitForm = (event) ->
   if event.keyCode == 13
