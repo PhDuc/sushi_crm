@@ -3,7 +3,6 @@
    in correct files based on functions */
 
 h1 {
-  font-family: 'Montez', sans-serif;
   color: #c94d00;
   font-size: 50px;
 }
@@ -145,10 +144,10 @@ ul.nav-body-full{
     font-size: 40px;
   }
   .mini#desktop-nav {
-    display: none;
   }
   .mini.mobile-nav {
     margin-top: 15px;
+    display: none;
   }
 }
 
@@ -160,10 +159,10 @@ ul.nav-body-full{
     font-size: 35px;
   }
   .mini#desktop-nav {
-    display: none;
   }
   .mini.mobile-nav {
     margin-top: 15px;
+    display: none;
   }
 }
 
@@ -175,10 +174,10 @@ ul.nav-body-full{
     font-size: 28px;
   }
   .mini#desktop-nav {
-    display: none;
   }
   .mini.mobile-nav {
     margin-top: 15px;
+    display: none;
   }
 }
 

@@ -1,5 +1,8 @@
 = javascript_include_tag 'home.js'
 
+- content_for :custom_styles do
+  = stylesheet_link_tag 'home/home_override'
+
 .page-wrapper.container
   .centralize
     .product-title Sushi CRM
