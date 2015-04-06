@@ -16,6 +16,9 @@ gem "i18n-js", ">= 3.0.0.rc8"                # Javascript internationalization
 gem "font-awesome-rails"                     # Awesome icon fonts
 gem 'newrelic_rpm'                           # NewRelic tracking
 gem 'noty-rails'                             # Awesome notification gem
+gem "lograge"                                # Cleaner logging
+gem "logstash-event"                         # Format log output
+gem 'foreigner'                              # Allow add_foreign_key
 
 group :production do
   gem 'rails_12factor'                       # Required for heroku Rails 4 ('rails_serve_static_assets')

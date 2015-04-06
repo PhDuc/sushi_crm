@@ -14,7 +14,8 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
 }
-label{
+
+.form__field label{
   float: right;
   width: 100%;
   height: 100%;
@@ -24,13 +25,13 @@ label{
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-input[type="submit"]{
+.form__field input[type="submit"]{
   width: 100%;
   margin: 0;
   background: none;
 }
-input,
-textarea{
+.form__field input,
+.form__field textarea{
   position: absolute;
   top: 0;
   right: 100%;

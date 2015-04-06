@@ -40,4 +40,40 @@ SushiCrm::Application.configure do
 
   # Loading the associated records of the objects returned by Model.find using as few queries as possible
   config.eager_load = false
+
+  #### LOGRAGE SETTINGS ####
+
+  # Enable / Disable
+  config.lograge.enabled = true
+
+  # Choose formatters:
+  # Lograge::Formatters::Lines.new
+  # Lograge::Formatters::Cee.new
+  # Lograge::Formatters::Graylog2.new
+  # Lograge::Formatters::KeyValue.new  # default lograge format
+  # Lograge::Formatters::Json.new
+  # Lograge::Formatters::Logstash.new
+  # Lograge::Formatters::Raw.new       # Returns a ruby hash object
+  config.lograge.formatter = Lograge::Formatters::Logstash.new
+
+  # Custom_options for Lograge. Can be a lambda or hash
+  # If it's a lambda then it must return a hash
+  config.lograge.custom_options = lambda do |event|
+    # capture some specific timing values you are interested in
+    {:name => "LOGRAGE", :time => event.time, :host => event.payload[:host]}
+  end
+
+  # Ignore settings for Lograge
+  # config.lograge.ignore_actions = ['home#index', 'aController#anAction']
+  # config.lograge.ignore_custom = lambda do |event|
+    # return true here if you want to ignore based on the event
+  # end
+
+  # If you want to keep original (verbose) Rails.logger
+  # Rails 4+
+  # config.lograge.logger = ActiveSupport::Logger.new "#{Rails.root}/log/lograge_#{Rails.env}.log"
+  # Rails 3.2
+  # config.lograge.logger = ActiveSupport::BufferedLogger.new "#{Rails.root}/log/lograge_#{Rails.env}.log"
+
+  #### END LORAGE SETTINGS ####
 end

@@ -5,4 +5,5 @@ SushiCrm::Application.routes.draw do
   get 'home/user_login'       => 'home#user_login'
   get 'dashboard'             => 'dashboard#index'
   get 'dashboard/:action'     => 'dashboard'
+
 end

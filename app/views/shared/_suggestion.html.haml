@@ -1,0 +1,10 @@
+.suggestion-footer
+  .container
+    .row
+      .col-lg-8.mT15
+        %i.fa.fa-weixin.bg-icon
+        %i How can we make this page better for you?
+    .row
+      .col-lg-12
+        = form_for @feedback, :url => '/dashboard/submit_feedback' do |f|
+          = f.text_area :content, :rows => 5, :class => "suggest-box", :placeholder => 'Your suggestions, ideas, complaints will greatly help us.'

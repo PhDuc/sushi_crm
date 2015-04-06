@@ -66,6 +66,11 @@ h1 {
   background-color: #fff;
   margin-top: -50px;
 }
+@media (max-width: 768px) {
+  #page-wrapper {
+    margin-top: 130px;
+  }
+}
 
 .content-wrapper {
   margin-top: -50px;

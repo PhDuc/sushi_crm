@@ -11,12 +11,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150315162330) do
+ActiveRecord::Schema.define(version: 20150406021311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "campaigns", force: true do |t|
+    t.string   "type"
+    t.string   "name"
+    t.string   "external_id"
+    t.integer  "limit"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "campaigns", ["external_id"], name: "index_campaigns_on_external_id", using: :btree
+
+  create_table "feedback_questions", force: true do |t|
+    t.string   "type"
+    t.text     "content"
+    t.string   "external_id"
+    t.integer  "campaign_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "feedback_questions", ["campaign_id"], name: "index_feedback_questions_on_campaign_id", using: :btree
+  add_index "feedback_questions", ["external_id"], name: "index_feedback_questions_on_external_id", using: :btree
+
+  create_table "feedbacks", force: true do |t|
+    t.string   "type"
+    t.text     "content"
+    t.text     "user_note"
+    t.string   "external_id"
+    t.integer  "feedback_question_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "feedbacks", ["external_id"], name: "index_feedbacks_on_external_id", using: :btree
+  add_index "feedbacks", ["feedback_question_id"], name: "index_feedbacks_on_feedback_question_id", using: :btree
+  add_index "feedbacks", ["user_id"], name: "index_feedbacks_on_user_id", using: :btree
+
   create_table "users", force: true do |t|
+    t.string   "email"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "username"
@@ -26,5 +65,10 @@ ActiveRecord::Schema.define(version: 20150315162330) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_foreign_key "feedback_questions", "campaigns", name: "feedback_questions_campaign_id_fk"
+
+  add_foreign_key "feedbacks", "feedback_questions", name: "feedbacks_feedback_question_id_fk"
+  add_foreign_key "feedbacks", "users", name: "feedbacks_user_id_fk"
 
 end
