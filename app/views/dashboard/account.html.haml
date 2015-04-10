@@ -1,0 +1,106 @@
+#wrapper
+  = render partial: 'shared/app_nav'
+  #page-wrapper
+    .container-fluid
+      / Page Heading
+      .row
+        .col-lg-12
+          %h1.page-header
+            Accounts
+            %small Customers Information
+          %ol.breadcrumb
+            %li.active
+              %i.fa.fa-users
+              Accounts
+      / /.row
+      .row
+        .col-lg-12
+          .alert.alert-info.alert-dismissable
+            %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} &times;
+            %i.fa.fa-info-circle
+            %strong Testing alert
+            Go to link
+            %a.alert-link{:href => "http://google.com"} Google.com
+      .row
+        .col-lg-12
+          .panel.panel-default
+            .panel-heading
+              %h3.panel-title
+                %i.fa.fa-users.fa-fw
+                User lists
+            .panel-body
+              .table-responsive
+                %table.table.table-bordered.table-hover.table-striped.account-tables
+                  %thead
+                    %tr
+                      %th Name
+                      %th Notes
+                      %th.center Actions
+                  %tbody
+                    %tr
+                      %td Duc Phan
+                      %td Sleeping while coding addict ...
+                      %td.center
+                        %a
+                          %i.fa.fa-phone
+                          %i.fa.fa-envelope-o
+                          %i.fa.fa-comment-o
+                    %tr
+                      %td Aathavan Thaybaran
+                      %td Android Cult to the max ...
+                      %td.center
+                        %a
+                          %i.fa.fa-phone
+                          %i.fa.fa-envelope-o
+                          %i.fa.fa-comment-o
+                    %tr
+                      %td Krishnan
+                      %td Want to talk to you through VoIP ...
+                      %td.center
+                        %a
+                          %i.fa.fa-phone
+                          %i.fa.fa-envelope-o
+                          %i.fa.fa-comment-o
+                    %tr
+                      %td Rama
+                      %td Hungry and know how to eat good food ...
+                      %td.center
+                        %a
+                          %i.fa.fa-phone
+                          %i.fa.fa-envelope-o
+                          %i.fa.fa-comment-o
+                    %tr
+                      %td Himashi
+                      %td You can talk to me anytime ...
+                      %td.center
+                        %a
+                          %i.fa.fa-phone
+                          %i.fa.fa-envelope-o
+                          %i.fa.fa-comment-o
+                    %tr
+                      %td Test User 1
+                      %td I am test user lol ...
+                      %td.center
+                        %a
+                          %i.fa.fa-phone
+                          %i.fa.fa-envelope-o
+                          %i.fa.fa-comment-o
+                    %tr
+                      %td Test User 2
+                      %td I am another test user lol lol ...
+                      %td.center
+                        %a
+                          %i.fa.fa-phone
+                          %i.fa.fa-envelope-o
+                          %i.fa.fa-comment-o
+                    %tr
+                      %td Test User 3
+                      %td I am another test user lol lol ...
+                      %td.center
+                        %a
+                          %i.fa.fa-phone
+                          %i.fa.fa-envelope-o
+                          %i.fa.fa-comment-o
+
+
+  = render partial: 'shared/suggestion'
