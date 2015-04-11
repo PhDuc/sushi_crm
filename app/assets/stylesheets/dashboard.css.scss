@@ -197,3 +197,26 @@ li {
     padding-right: 5px;
   }
 }
+
+.test-phone {
+  opacity: 1.0;
+  color: lightgray;
+  margin: auto;
+  width:auto;
+  height:auto;
+  width: 65%;
+
+  .modal-dialog {
+    width: 100%;
+  }
+
+  .modal-backdrop {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 830px) {
+  .hide1 {
+    display:none;
+  }
+}

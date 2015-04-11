@@ -1,0 +1,26 @@
+%script{'src'=>"//static.twilio.com/libs/twiliojs/1.2/twilio.min.js"}
+
+.modal.test-phone
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss"=>"modal", "aria-label"=>"Close"} &times;
+        %h4.modal-title#gridSystemModalLabel Agent Dashboard
+      .modal-body
+        .container-fluid
+          .row.col-lg-12
+            .col-lg-4
+              .boxie
+                %p
+
+            .col-lg-4
+              .boxie
+                %p
+                  Connecting...
+            .col-lg-4
+              .boxie
+                %p
+                  Aathavan Thayabaran
+      .modal-footer
+        %button.btn.btn-primary.call-button Make Call
+
