@@ -28,20 +28,10 @@ class TwilioController < ApplicationController
   end
 
   def connect_customer
-    # mocking a db of customers, connect to real db in production
-    customers = {
-      '123' => {'phone_number' => '+14086101410'},
-      '456' => {'phone_number' => '+14085109019'}
-    }
-    # accessing mocked customers db
-    customer = customers[params[:id]]
     response = Twilio::TwiML::Response.new do |r|
-      r.Say 'Hello. Connecting you the customer now.', :voice => 'alice'
-      r.Dial :callerId => Rails.application.secrets.twilio_phone_number do |d|
-        d.Number customer['phone_number']
-      end
+      r.Dial :callerId => '4085109019', :timeout => '40000', :record => 'true'
     end
-
+    Rails.logger.info "RESPONSE: #{response.inspect}"
     render_twiml response
   end
 end

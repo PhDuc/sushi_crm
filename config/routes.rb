@@ -9,6 +9,4 @@ SushiCrm::Application.routes.draw do
 
   post 'twilio/voice'            => 'twilio#voice'
   post 'twilio/connect_customer' => 'twilio#connect_customer'
-
-
 end

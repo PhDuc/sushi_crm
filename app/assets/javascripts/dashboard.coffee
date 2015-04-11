@@ -11,14 +11,10 @@ Dashboard.openMobileModal = (event) ->
   $('.test-phone').modal(
     backdrop: 'static',
     keyboard: true)
-  params = {'test': '12345'}
-  url = "http://localhost:3000/dashboard/agent"
-  jQuery.getJSON url, params, Dashboard.initTwilioClient()
 
 Dashboard.initTwilioClient = (data)->
-  console.log(data)
-  token = data.result.token
-  console.log(token)
+  token = data.token
+  $('#twiloToken').val(token)
 
 Dashboard.call = () ->
   console.log("Making call")

@@ -1,5 +1,4 @@
 %script{'src'=>"//static.twilio.com/libs/twiliojs/1.2/twilio.min.js"}
-
 .modal.test-phone
   .modal-dialog
     .modal-content
@@ -14,13 +13,12 @@
                 %p
 
             .col-lg-4
-              .boxie
-                %p
-                  Connecting...
+              #log Idle
             .col-lg-4
               .boxie
                 %p
                   Aathavan Thayabaran
       .modal-footer
-        %button.btn.btn-primary.call-button Make Call
+        %button.btn.btn-primary.call#caller Make Call
+        %button.btn.btn-primary.hangup#hangup Hang Up
 
