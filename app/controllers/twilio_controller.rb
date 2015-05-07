@@ -28,10 +28,10 @@ class TwilioController < ApplicationController
   # end
 
   def connect_customer
-    Rails.logger.info "[INFO] ConnectCustomer: #{params.inspect}"
+    Rails.logger.info "[INFO] ConnectCustomer: #{params.inspect} "
     response = Twilio::TwiML::Response.new do |r|
       r.Say 'Hello. Connecting you the customer now.', :voice => 'alice'
-      r.Dial :callerId => Rails.application.secrets.twilio_phone_number do |d|
+      r.Dial :callerId => '14086101410' do |d|
         d.Number('+15105792793')
       end
     end
