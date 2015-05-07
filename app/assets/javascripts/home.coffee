@@ -12,6 +12,8 @@ Home.setUp = () ->
   $(document).on 'click', '.login-button, .login-link', Home.openLoginModal
   $(document).on 'click', '.login-submit', Home.authenticateUserWithWait
   $(document).on 'focusout', '.form__field input', Home.preserveFormInput
+  $(document).on 'click', '.register-account', Home.openRegisterModal
+  $(document).on 'click', '.register-submit', Home.registerUser
 
   Home.setHeaderClass()
   Home.notify()
@@ -96,11 +98,22 @@ Home.openLoginModal = () ->
   $('.login_result').removeClass('login-failed').removeClass('login-success')
   $('.login_result').html('')
   $('#password').val('')
-  $('.modal').removeClass('hidden')
-  $('.modal').modal()
+  $('.modal.login-modal').removeClass('hidden')
+  $('.modal.login-modal').modal()
+
+Home.openRegisterModal = () ->
+  $('.register_result').removeClass('login-failed').removeClass('login-success')
+  $('.register_result').html('')
+  $('#password').val('')
+  $('#confirm_password').val('')
+  $('.modal.register-modal').removeClass('hidden')
+  $('.modal.register-modal').modal()
 
 Home.closeLoginModal = () ->
-  $('.modal').modal('hide')
+  $('.modal.login-modal').modal('hide')
+
+Home.closeRegisterModal = () ->
+  $('.modal.register-modal').modal('hide')
 
 Home.authenticateUserWithWait = () ->
   document.getElementById('login-submit').disabled = true
@@ -132,6 +145,43 @@ Home.authenticateUser = () ->
   document.getElementById('login-submit').disabled = false
   $('#login-submit').html("LOGIN »")
   false
+
+Home.registerUser = () ->
+  params = {
+    username: $('#user-name').val()
+    password: $('#pass-word').val()
+    first_name: $('#first_name').val()
+    last_name: $('#last_name').val()
+    email: $('#email').val()
+  }
+
+  url = "/home/user_register"
+
+  $.ajax
+    url: url
+    type: "POST"
+    dataType: 'json'
+    data: params
+
+    error: (data) ->
+      Home.handleRegisterError(data)
+    success: (data) ->
+      Home.handleRegisterSuccess(data)
+  false
+
+Home.handleRegisterSuccess = (data) ->
+  if data["success"] == 'true'
+    $('.register_result').removeClass('login-failed').addClass('login-success')
+    $('.register_result').html('Register Sucess!')
+    Home.closeRegisterModal()
+  else
+    $('.register_result').removeClass('login-success').addClass('login-failed')
+    $('.register_result').html(data["reason"])
+
+
+Home.handleRegisterError = (data) ->
+  $('.register_result').removeClass('login-success').addClass('login-failed')
+  $('.register_result').html('An error has occured!')
 
 Home.handleLoginSuccess = (data) ->
   if data["authenticated"] == 'true'

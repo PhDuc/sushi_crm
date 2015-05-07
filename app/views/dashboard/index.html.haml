@@ -1,6 +1,7 @@
 #wrapper
   = render partial: 'shared/app_nav'
   #page-wrapper
+    = hidden_field_tag :twilioToken
     .container-fluid
       / Page Heading
       .row
@@ -12,15 +13,6 @@
             %li.active
               %i.fa.fa-dashboard
               Dashboard
-      / /.row
-      .row
-        .col-lg-12
-          .alert.alert-info.alert-dismissable
-            %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} &times;
-            %i.fa.fa-info-circle
-            %strong Testing alert
-            Go to link
-            %a.alert-link{:href => "http://google.com"} Google.com
       / /.row
       .row
         .col-lg-3.col-md-6
@@ -60,8 +52,8 @@
                 .col-xs-3
                   %i.fa.fa-shopping-cart.fa-5x
                 .col-xs-9.text-right
-                  .huge 124
-                  %div New Orders!
+                  .huge 40
+                  %div New Leads!
             %a{:href => "#"}
               .panel-footer
                 %span.pull-left View Details
@@ -90,9 +82,11 @@
             .panel-heading
               %h3.panel-title
                 %i.fa.fa-bar-chart-o.fa-fw
-                Area Chart
+                Segmentation Chart
             .panel-body
-              #morris-area-chart
+              %h4{style: 'color: green'} Sales segmentation chart
+              %img{src: 'https://cldup.com/ZzqIuMruv5.png', style: "width: 85%; margin-left: 20px"}
+              %p.note{style: 'margin-left: 20px'} Generic sales chart on internet
       / /.row
       .row
         .col-lg-4
@@ -100,7 +94,7 @@
             .panel-heading
               %h3.panel-title
                 %i.fa.fa-long-arrow-right.fa-fw
-                Segmentation Chart
+                Time Allocation Chart
             .panel-body
               #morris-donut-chart
               .text-right
@@ -112,7 +106,7 @@
             .panel-heading
               %h3.panel-title
                 %i.fa.fa-clock-o.fa-fw
-                Tasks Panel
+                History Panel
             .panel-body
               .list-group
                 %a.list-group-item{:href => "#"}
@@ -126,7 +120,7 @@
                 %a.list-group-item{:href => "#"}
                   %span.badge 23 minutes ago
                   %i.fa.fa-fw.fa-truck
-                  Order 392 shipped
+                  House moving 330 finished
                 %a.list-group-item{:href => "#"}
                   %span.badge 46 minutes ago
                   %i.fa.fa-fw.fa-money
@@ -134,19 +128,11 @@
                 %a.list-group-item{:href => "#"}
                   %span.badge 1 hour ago
                   %i.fa.fa-fw.fa-user
-                  A new user has been added
-                %a.list-group-item{:href => "#"}
-                  %span.badge 2 hours ago
-                  %i.fa.fa-fw.fa-check
-                  Completed task: "pick up dry cleaning"
-                %a.list-group-item{:href => "#"}
-                  %span.badge yesterday
-                  %i.fa.fa-fw.fa-globe
-                  Saved the world
+                  A new account has been added
                 %a.list-group-item{:href => "#"}
                   %span.badge two days ago
                   %i.fa.fa-fw.fa-check
-                  Completed task: "fix error on sales page"
+                  Completed task: "Contact Aathavan"
               .text-right
                 %a{:href => "#"}
                   View All Activity

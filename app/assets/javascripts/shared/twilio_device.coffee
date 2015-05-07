@@ -3,9 +3,14 @@ class TwilioDevice
     @initTwilioDeviceBindings()
     @initFormBindings()
 
+  sleep = (ms) ->
+    start = new Date().getTime()
+    continue while new Date().getTime() - start < ms
+
   initTwilioDeviceBindings: ->
-    # url = "https://xkzblgxuix.localtunnel.me/dashboard/agent"
-    # $.getJSON(url, {}, (data)->  $('#twilioToken').val(data.token))
+    url = "/dashboard/agent"
+    $.getJSON(url, {}, (data) -> $('#twilioToken').val(data.token))
+    sleep 2000
     twilio_token = $('#twilioToken').val()
     twilio_device = Twilio.Device
     console.log("Setup Twilio token: " + twilio_token)
@@ -21,7 +26,7 @@ class TwilioDevice
       $("#log").text("Error: " + error.message)
       if error.message['code'] == 31205 #Expired token
         console.log("TOKEN EXPIRED")
-        url = window.location.origin + '/dashboard/agent'
+        url = '/dashboard/agent'
         oo = $.getJSON(url, {})
 
     #/* Log a message when a call connects. */

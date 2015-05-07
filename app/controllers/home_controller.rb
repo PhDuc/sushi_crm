@@ -17,4 +17,25 @@ class HomeController < ApplicationController
       render :json => {:status => 'ok', :authenticated => 'false'}
     end
   end
+
+  def user_register #AJAX
+    Rails.logger.info "PARAMS: #{params.inspect}"
+    username_lookup = User.find_by_username(params[:username])
+    email_lookup = User.find_by_email(params[:email])
+    if params[:username].blank? || params[:email].blank? || params[:password].blank? || params[:first_name].blank? || params[:last_name].blank?
+      render :json => {:status => 'ok', :success => 'false', :reason => 'Missing information' }
+    elsif username_lookup
+      render :json => {:status => 'ok', :success => 'false', :reason => 'Existing Username' }
+    elsif email_lookup
+      render :json => {:status => 'ok', :success => 'false', :reason => 'Existing Email' }
+    else
+      user = User.create(username: params[:username], first_name: params[:first_name], last_name: params[:last_name], password: params[:password])
+      user.save!
+      if user.id #lol
+        render :json => {:status => 'ok', :success => 'true'}
+      else
+        render :json => {:status => 'ok', :success => 'false', :reason => 'Something went wrong' }
+      end
+    end
+  end
 end

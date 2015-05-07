@@ -1,0 +1,37 @@
+.modal.register-modal.fade.hidden
+  .container
+    .row.vertical-offset-100
+      .col-md-4.col-md-offset-4
+        .panel.panel-default.centralize.login-panel
+          .panel-heading
+            .row-fluid.user-row
+              =image_tag  "icons/login_icon.png", :class => "img-responsive"
+          .panel-body
+            %form
+              %label.panel-login
+                .register_result.login-failed
+              .form__field
+                %input#first_name{:type=>"text"}
+                %label{:for => "first_name"} First Name
+              .form__field
+                %input#last_name{:type=>"text"}
+                %label{:for => "last_name"} Last Name
+              .form__field
+                %input#email{:type=>"text"}
+                %label{:for => "email"} Email
+              .form__field
+                %input#user-name{:type=>"text"}
+                %label{:for => "user-name"} Username
+              .form__field
+                %input#pass-word{:type=>"password"}
+                %label{:for => "pass-word"} Password
+              .form__field
+                %input#confirm_password{:type=>"password"}
+                %label{:for => "confirm_password"} Confirm
+              / %p.note.centralize * Hint: phanducsjsu/123456
+              .btn.btn-lg.btn-block.btn-primary.centralize.register-submit{:type => "submit", :value => "Login »", :id => 'register-submit'} REGISTER »
+
+
+
+
+

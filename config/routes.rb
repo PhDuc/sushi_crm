@@ -8,6 +8,7 @@ SushiCrm::Application.routes.draw do
   get 'dashboard/:action'        => 'dashboard'
   get 'dashboard/lead/:action'   => 'lead'
 
+  post 'home/user_register'      => 'home#user_register'
   post 'twilio/voice'            => 'twilio#voice'
   post 'twilio/connect_customer' => 'twilio#connect_customer'
 end

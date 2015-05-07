@@ -1,7 +1,7 @@
 #wrapper
   = render partial: 'shared/app_nav'
   #page-wrapper
-    = hidden_field_tag :twilioToken, 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6InNjb3BlOmNsaWVudDpvdXRnb2luZz9hcHBTaWQ9QVA4NzAxNWYxMjBmNDJlZmU0YjE3MDBhMTgzMWU5NmI5MCIsImlzcyI6IkFDNTlkZGFjNTFmNjEzMzkwMjg3MmQ2MzJmNWU1Y2NhOWEiLCJleHAiOjE0MjkzODg0NDh9.Y2ESPsDPN1QbV_jGSZmf0fu8M4FZ_yiZlceBwtK6qXo'
+    = hidden_field_tag :twilioToken
     .container-fluid
       / Page Heading
       .row
@@ -13,15 +13,6 @@
             %li.active
               %i.fa.fa-users
             Accounts
-      / /.row
-      .row
-        .col-lg-12
-          .alert.alert-info.alert-dismissable
-            %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} &times;
-            %i.fa.fa-info-circle
-            %strong Testing alert
-            Go to link
-            %a.alert-link{:href => "http://google.com"} Google.com
       .row
         .col-lg-12
           .panel.panel-default
