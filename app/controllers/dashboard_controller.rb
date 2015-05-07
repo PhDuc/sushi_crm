@@ -24,8 +24,8 @@ class DashboardController < ApplicationController
     )
 
 
-    capability = Twilio::Util::Capability.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token
-    capability.allow_client_outgoing Rails.application.secrets.twilio_twiml_app_sid
+    capability = Twilio::Util::Capability.new 'AC59ddac51f6133902872d632f5e5cca9a', '111ad6f3158e682e5eaabb032a3df539'
+    capability.allow_client_outgoing 'APef92c29b4373cfbf4d179c3cf406cc2c'
     @token = capability.generate()
     render :json => {token: @token}
   end
