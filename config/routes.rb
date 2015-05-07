@@ -6,6 +6,7 @@ SushiCrm::Application.routes.draw do
   get 'dashboard'                => 'dashboard#index'
   get 'dashboard/agent'          => 'dashboard#agent'
   get 'dashboard/:action'        => 'dashboard'
+  get 'dashboard/lead/:action'   => 'lead'
 
   post 'twilio/voice'            => 'twilio#voice'
   post 'twilio/connect_customer' => 'twilio#connect_customer'

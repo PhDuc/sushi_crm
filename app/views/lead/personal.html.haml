@@ -1,0 +1,90 @@
+#wrapper
+  = render partial: 'shared/app_nav'
+  #page-wrapper
+    .container-fluid
+      / Page Heading
+      .row
+        .col-lg-12
+          %h1.page-header
+            Leads
+            %small Lead Information
+          %ol.breadcrumb
+            %li.active
+              %i.fa.fa-users
+              My Leads
+      .row
+        .col-lg-12
+          .panel.panel-default
+            .panel-heading
+              %h3.panel-title
+                %i.fa.fa-users.fa-fw
+                Lists
+            .panel-body
+              .table-responsive
+                %table.table.table-bordered.table-hover.table-striped.account-tables
+                  %thead
+                    %tr
+                      %th Name
+                      %th.center Cell
+                      %th.center Email
+                      %th.hide1 Info
+                      %th.center Actions
+                  %tbody
+                    %tr
+                      %td Pniocio Thayiz
+                      %th.center 408-333-3333
+                      %th.center pthay@sushicrm.com
+                      %td.hide1 2630 Bon Bon Dr, San Jose, CA 95148
+                      %td.center
+                        %a
+                          %i.fa.fa-phone
+                          %i.fa.fa-envelope-o
+                          %i.fa.fa-comment-o
+                      %td.hidden.number
+                        14085109019
+                    %tr
+                      %td Aathavan Thaybaran
+                      %th.center 408-213-2133
+                      %th.center aathavan@sushicrm.com
+                      %td.hide1 2722 Monotone Dr, Union City, CA 93241
+                      %td.center
+                        %a
+                          %i.fa.fa-phone
+                          %i.fa.fa-envelope-o
+                          %i.fa.fa-comment-o
+                      %td.hidden.number
+                        14082217183
+                    %tr
+                      %td R. Krishnan
+                      %th.center 408-123-4662
+                      %th.center krishnanrad@sushicrm.com
+                      %td.hide1 3888 Freeway 1, Fremont, CA 91233
+                      %td.center
+                        %a
+                          %i.fa.fa-phone
+                          %i.fa.fa-envelope-o
+                          %i.fa.fa-comment-o
+                      %td.hidden.number
+                        15105792793
+                    %tr
+                      %td K. Rama
+                      %th.center 415-132-6782
+                      %th.center ramachin@sushicrm.com
+                      %td.hide1 401B Huntington Beach Hwy, Los Angeles, CA 92000
+                      %td.center
+                        %a
+                          %i.fa.fa-phone
+                          %i.fa.fa-envelope-o
+                          %i.fa.fa-comment-o
+                    %tr
+                      %td A. Himashi
+                      %th.center 510-788-3333
+                      %th.center himanshia@sushicrm.com
+                      %td.hide1 288 Market St, San Francisco, CA 94111
+                      %td.center
+                        %a
+                          %i.fa.fa-phone
+                          %i.fa.fa-envelope-o
+                          %i.fa.fa-comment-o
+
+  = render partial: 'shared/mobile_call'

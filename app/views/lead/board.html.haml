@@ -1,0 +1,106 @@
+#wrapper
+  = render partial: 'shared/app_nav'
+  #page-wrapper
+    .container-fluid
+      / Page Heading
+      .row
+        .col-lg-12
+          %h1.page-header
+            Leads
+            %small Lead Information
+          %ol.breadcrumb
+            %li.active
+              %i.fa.fa-users
+              Lead Board
+      .row
+        .col-lg-12
+          .panel.panel-default
+            .panel-heading
+              %h3.panel-title
+                %i.fa.fa-users.fa-fw
+                Bidding list
+            .panel-body
+              .table-responsive
+                %table.table.table-bordered.table-hover.table-striped.account-tables
+                  %thead
+                    %tr
+                      %th Name
+                      %th Info
+                      %th Score
+                      %th Current bid
+                      %th Your bid
+                      %th.center Actions
+                  %tbody
+                    %tr
+                      %td R. Pjokio
+                      %td **** , 95148
+                      %td.center 3
+                      %td.center $30
+                      %td.center N/A
+                      %td.center
+                        .bid-action
+                          $
+                          %input
+                          %a
+                            Bid
+                        .bid-timer.hidden
+                      %td.hidden.number
+                        14085109019
+                    %tr
+                      %td A. Thaybaran
+                      %td **** , 95148
+                      %td.center 10
+                      %td.center $100
+                      %td.center $100
+                      %td.center
+                        .bid-action
+                          $
+                          %input
+                          %a
+                            Bid
+                        .bid-timer.hidden
+                      %td.hidden.number
+                        14082217183
+                    %tr
+                      %td R. Krishnan
+                      %td **** , 95148
+                      %td.center 8
+                      %td.center $80
+                      %td.center $25
+                      %td.center
+                        .bid-action
+                          $
+                          %input
+                          %a
+                            Bid
+                        .bid-timer.hidden
+                      %td.hidden.number
+                        15105792793
+                    %tr
+                      %td K. Rama
+                      %td **** , 95123
+                      %td.center 7
+                      %td.center $70
+                      %td.center N/A
+                      %td.center
+                        .bid-action
+                          $
+                          %input
+                          %a
+                            Bid
+                        .bid-timer.hidden
+                    %tr
+                      %td A. Himashi
+                      %td **** , 95111
+                      %td.center 8
+                      %td.center $50
+                      %td.center N/A
+                      %td.center
+                        .bid-action
+                          $
+                          %input
+                          %a
+                            Bid
+                        .bid-timer.hidden
+
+  = render partial: 'shared/mobile_call'

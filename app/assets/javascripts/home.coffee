@@ -23,13 +23,13 @@ Home.setUp = () ->
 Home.notify = ->
   if _.include(['/', '/home'], window.location.pathname)
     Home.notifyLandingPage()
-  else
-    Home.notifyAppPages()
+  # else
+  #   Home.notifyAppPages()
 
 Home.notifyLandingPage = ->
   noty(
       id: 'home-notify'
-      text: "<h4>Important:</h4><p> We have a dashboard WIP now !"
+      text: "<h4>Important:</h4><p> This site is still in building process. What you see is not final yet :)"
       type: 'warning'
       animation:
         open: 'animated fadeInDownBig',
@@ -38,9 +38,9 @@ Home.notifyLandingPage = ->
         speed: 500
       closeWith: ['click']
       buttons: [
-        addClass: 'btn btn-primary', text: 'Login to check it out', onClick: ($noty) ->
+        addClass: 'btn btn-primary', text: 'Got it', onClick: ($noty) ->
           $noty.close()
-          Home.openLoginModal()
+          # Home.openLoginModal()
         ]
     )
 

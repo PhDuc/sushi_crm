@@ -1,5 +1,7 @@
 class DashboardController < ApplicationController
   before_action :set_feedback
+  before_action :set_token
+
   def index
 
   end
@@ -35,5 +37,8 @@ class DashboardController < ApplicationController
   private
   def set_feedback
     @feedback = Feedback.new
+  end
+
+  def set_token
   end
 end

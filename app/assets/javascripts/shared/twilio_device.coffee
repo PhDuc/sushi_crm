@@ -1,8 +1,6 @@
 class TwilioDevice
   constructor: ->
-    console.log('123')
     @initTwilioDeviceBindings()
-    console.log('456')
     @initFormBindings()
 
   initTwilioDeviceBindings: ->
@@ -21,6 +19,10 @@ class TwilioDevice
     #/* Report any errors on the screen */
     twilio_device.error (error) ->
       $("#log").text("Error: " + error.message)
+      if error.message['code'] == 31205 #Expired token
+        console.log("TOKEN EXPIRED")
+        url = window.location.origin + '/dashboard/agent'
+        oo = $.getJSON(url, {})
 
     #/* Log a message when a call connects. */
     twilio_device.connect (conn) ->

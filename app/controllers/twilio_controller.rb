@@ -16,22 +16,25 @@ class TwilioController < ApplicationController
     render_twiml response
   end
 
-  def make_call
-    account_sid = "AC0db54d68813bbbd99edfb93a93d2eb79"
-    auth_token = "dc3540558de602a76c35869b0f575f16"
-    @client ||= Twilio::REST::Client.new account_sid, auth_token
-    @call = @client.account.calls.create(
-      :url => "http://demo.twilio.com/docs/voice.xml",
-      :to => "+14108675309",
-      :from => "+15005550006")
-    puts call.start_time
-  end
+  # def make_call
+  #   account_sid = "AC0db54d68813bbbd99edfb93a93d2eb79"
+  #   auth_token = "dc3540558de602a76c35869b0f575f16"
+  #   @client ||= Twilio::REST::Client.new account_sid, auth_token
+  #   @call = @client.account.calls.create(
+  #     :url => "http://demo.twilio.com/docs/voice.xml",
+  #     :to => "+14108675309",
+  #     :from => "+15005550006")
+  #   puts call.start_time
+  # end
 
   def connect_customer
     response = Twilio::TwiML::Response.new do |r|
-      r.Dial :callerId => '4085109019', :timeout => '40000', :record => 'true'
+      r.Say 'Hello. Connecting you the customer now.', :voice => 'alice'
+      r.Dial :callerId => Rails.application.secrets.twilio_phone_number do |d|
+        d.Number('+15105792793')
+      end
     end
-    Rails.logger.info "RESPONSE: #{response.inspect}"
+
     render_twiml response
   end
 end
