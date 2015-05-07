@@ -6,6 +6,7 @@ window.Dashboard = @Dashboard || {}
 Dashboard.setUp = () ->
   $(document).on 'click', '.account-tables .fa-phone', Dashboard.openMobileModal
   $(document).on 'click', '.call-button', Dashboard.call
+  Dashboard.initTwilioClient()
 
 Dashboard.openMobileModal = (event) ->
   $('.test-phone').modal(
