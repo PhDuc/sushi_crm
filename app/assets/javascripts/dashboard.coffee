@@ -12,9 +12,9 @@ Dashboard.openMobileModal = (event) ->
     backdrop: 'static',
     keyboard: true)
 
-Dashboard.initTwilioClient = (data)->
-  token = data.token
-  $('#twiloToken').val(token)
+Dashboard.initTwilioClient = ()->
+  url = "/dashboard/agent"
+  $.getJSON(url, {}, (data) -> $('#twilioToken').val(data.token))
 
 Dashboard.call = () ->
   console.log("Making call")

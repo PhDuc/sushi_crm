@@ -8,9 +8,8 @@ class TwilioDevice
     continue while new Date().getTime() - start < ms
 
   initTwilioDeviceBindings: ->
-    url = "/dashboard/agent"
-    $.getJSON(url, {}, (data) -> $('#twilioToken').val(data.token))
-    sleep 2000
+    # url = "/dashboard/agent"
+    # $.getJSON(url, {}, (data) -> $('#twilioToken').val(data.token))
     twilio_token = $('#twilioToken').val()
     twilio_device = Twilio.Device
     console.log("Setup Twilio token: " + twilio_token)
