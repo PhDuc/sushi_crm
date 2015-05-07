@@ -215,6 +215,26 @@ li {
   }
 }
 
+.edit-account-modal {
+  opacity: 1.0;
+  color: lightgray;
+  margin: auto;
+  width:auto;
+  height:auto;
+  width: 65%;
+
+  .modal-dialog {
+    width: 100%;
+  }
+
+  .modal-backdrop {
+    background-color: transparent;
+  }
+  .container {
+    width: 75%;
+  }
+}
+
 @media (max-width: 830px) {
   .hide1 {
     display:none;
